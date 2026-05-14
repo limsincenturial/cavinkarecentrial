@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Update placeholder hint
         if (providerValue === 'custom') {
             emailInput.placeholder = 'Enter Email';
-            showEmailHint('Enter your full email address', 3000);
+            showEmailHint('Enter Your Email', 3000);
         } else {
             emailInput.placeholder = 'username' + provider.suffix;
             showEmailHint(`Enter your ${provider.name} username`, 3000);
@@ -195,12 +195,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (selectedProvider) {
             const provider = mailProviders[selectedProvider];
             if (selectedProvider === 'custom') {
-                showEmailHint('Enter your full email address', 3000);
+                showEmailHint('Enter Your Full Email', 3000);
             } else {
                 showEmailHint(`Enter your ${provider.name} username`, 3000);
             }
         } else {
-            showEmailHint('Select a mail provider or enter full email', 3000);
+            showEmailHint('Select Email Provider or Enter Full Email', 3000);
         }
     });
     
@@ -358,7 +358,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Reset dropdown to default state
         dropdownSelected.innerHTML = `
             <i class="fas fa-envelope"></i>
-            <span>Select Mail Provider</span>
+            <span>Select Email Provider</span>
             <i class="fas fa-chevron-down dropdown-arrow"></i>
         `;
         dropdownSelected.classList.remove('has-selection');
@@ -377,8 +377,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const emailValue = emailInput.value.trim();
         
         if (!emailValue) {
-            showEmailHint('Please enter your email address', 3000);
-            alert('Please enter your email address');
+            showEmailHint('Please Enter Your Email', 3000);
+            alert('Please Enter Your Email');
             return false;
         }
         
